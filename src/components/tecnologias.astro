@@ -1,0 +1,36 @@
+---
+import Skill from "./skill.astro";
+
+---
+<div class="mb-16">
+    <h2 class="text-2xl mb-8  md:text-3xl lg:text-4xl md:mb-16">Tecnologias</h2>
+    <div class="product-container hidden-products grid grid-cols-responSkill sm:grid-cols-responsive gap-4  overflow-hidden max-w-7xl lg:m-auto">
+         <Skill image={"./html.png"} name="HTML" width="50px"/>
+         <Skill image={"./css-3.png"} name="CSS3" width="50px"/>
+         <Skill image={"./tailwind.png"} name="Tailwindcss" width="50px"/>
+         <Skill image={"./bootstrap.png"} name="Bootstrap" width="50px"/>
+         <Skill image={"./Git.png"} name="GIT" width="50px"/>
+         <Skill image={"./React.png"} name="React" width="50px"/>
+         <Skill image={"./typescript.png"} name="Typescript" width="50px"/>
+         <Skill image={"./nodejs.png"} name="Node.js" width="50px"/>
+         <Skill image={"./mysql.png"} name="mysql" width="50px"/>
+         <Skill image={"./mongo.png"} name="mongo" width="50px"/>
+    </div>
+</div>
+<!-- <style>
+    .show-products{
+    max-height: 999px; /* Ajusta la altura máxima según sea necesario */
+    transition: max-height 0.3s ease-in-out; /* Agrega una transición suave */
+    }
+</style> -->
+
+
+<!-- <script>
+    const btn =document.querySelector(".btn")
+    btn?.addEventListener("click",toggleProducts)
+    function toggleProducts() {
+    let productContainer = document.querySelector('.product-container');
+    console.log(productContainer)
+    productContainer.classList.toggle('show-products');
+}
+</script> -->

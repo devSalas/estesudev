@@ -1,0 +1,37 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	img: string;
+}
+
+const { img, title, body } = Astro.props;
+---
+<div class="project-box rounded-secondary overflow-hidden">
+    <div class="flex flex-col gap-4 p-4  bg-primary   ">
+        <figure class="overflow-hidden">
+            <img src={img} alt="" class="hover:animate-scale w-full ">
+        </figure>
+        <div>
+           <h3>{title}</h3>
+           <p>
+            {body}
+           </p>
+        </div>
+        <div class="flex gap-4 justify-center items-center">
+            <button class=" bg-gradient-to-r from-purple-500 via-blue-600 to-sky-500  border-third py-3 px-7 mt-8 rounded-3xl">ver página</button>
+            <button class="btn-white border-[1px] border-white py-3 px-7 mt-8 rounded-3xl hover:animate-scale">Github</button>
+        </div>
+    </div>
+</div>
+
+<style>
+
+
+    
+
+   .project-box{
+    background: var(--border-color);
+    padding: 2px;
+   }
+</style>

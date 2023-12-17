@@ -1,0 +1,27 @@
+---
+interface Props{
+  name:string;
+  image:string;
+  width:string;
+}
+
+const {name,image,width} = Astro.props;
+---
+<div class="box-skill rounded-primary ">
+  <div class="skill bg-primary h-full  hover:bg-gray-800   flex sm:items-center  gap-4 p-4 " >
+      <figure>
+          <img src={image} alt="gmail" width={width} >
+      </figure>
+      <h3>{name}</h3>
+  </div>
+
+</div>
+
+<style>
+   .box-skill{
+    background:var(--border-color);
+    position: relative;
+    padding: 2px;
+    height: 100%;
+   }
+</style>

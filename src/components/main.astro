@@ -1,0 +1,44 @@
+---
+import Links from "./links.astro";
+
+---
+
+<div class="pb-20  md:min-h-screen md:flex md:flex-col">
+    <header class="w-full grid grid-cols-2 gap-4 sm:flex sm:justify-between">
+        <div class="col-span-1  text-3xl md:text-3xl bg-gradient-to-r from-purple-500 via-blue-600 to-sky-600 text-transparent bg-clip-text ">estesudev</div>
+        <Links />
+        <nav class="text-secondary/70 flex justify-around sm:justify-between items-end col-span-2  sm:col-span-1 gap-4 md:text-lg">
+            <a href="" class="hover:animate-links hover:text-sky-600 hover:underline">Proyectos</a>
+            <a href="" class="hover:animate-links hover:text-sky-600 hover:underline">Tecnologias</a>
+            <a href="" class="hover:animate-links hover:text-sky-600 hover:underline"> sobre mi</a>
+        </nav>
+        
+    </header>
+    <main class="flex flex-col justify-center gap-4 pt-10 m-auto max-w-xs  sm:flex-row sm:max-w-full md:grow-1 md:justify-center md:items-start">
+        <div  class="md:max-w-xl">
+            <h1 class=" my-4 text-2xl  md:text-5xl md:my-8 font-black text-start ">
+                <strong class="font-semibold bg-gradient-to-r from-purple-500 via-blue-600 to-sky-600 text-transparent bg-clip-text">Hola, Soy Esteban Salas</strong>  <br />
+                 <strong class="font-semibold">Frontend Developer</strong>
+            </h1>
+            <p class=" text-secondary/70 sm:max-w-xs md:max-w-max leading-relaxed">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum saepe quod suscipit molestias et illum quasi eveniet repellendus sunt, fuga, cupiditate perferendis eum commodi? Iste necessitatibus nobis vitae ut ipsa.
+            </p>
+            <div>
+                <button class="hidden bg-gradient-to-r from-purple-500 via-blue-600 to-sky-600  h-14 py-3 px-7 mt-8 rounded-primary sm:block ">
+                    Descargar CV
+                </button>
+            </div>
+        </div>
+        <div class="">
+
+            <figure class="w-72 m-auto sm:mt-5">
+                <img class="rounded-full w-72"  src="./perfil.jpg" alt="">
+            </figure>
+            <div class="text-center">
+                <button class=" bg-gradient-to-r from-purple-500 via-blue-600 to-sky-600  py-3 px-7 mt-8  rounded-primary sm:hidden ">
+                    Descargar CV
+                </button>
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="box">
+      <h1 style='--content: "Developer"'>Developer</h1>
+
+    </div>
+  </body>
+  <style>
+    body {
+  background-color: #000;
+}
+.box {
+  /* background-color: red; */
+}
+h1 {
+  color: white;
+  display: block;
+  position: relative;
+}
+
+h1::before {
+    background-color: blue;
+    background:linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%);
+  /* position: absolute; */
+  content: "promesa";
+  inset: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-oclor: transparent;
+}
+
+  </style>
+</html>
