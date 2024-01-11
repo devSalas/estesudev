@@ -3,24 +3,31 @@ interface Props {
 	title: string;
 	body: string;
 	img: string;
+    classN:string;
+    githubUrl:string;
+    pageUrl:string;
 }
 
-const { img, title, body } = Astro.props;
+const { img, title, body,classN, githubUrl,pageUrl} = Astro.props;
 ---
-<div class="project-box rounded-secondary overflow-hidden">
-    <div class="flex flex-col gap-4 p-4  bg-primary   ">
-        <figure class="overflow-hidden">
-            <img src={img} alt="" class="hover:animate-scale w-full ">
+<div class={`rounded-secondary overflow-hidden m-auto` }>
+    <div class="flex flex-col gap-4 p-4  bg-primary ">
+        <h3 class="text-2xl text-center mb-4 sm:text-5xl font-light">
+            Chat
+        </h3>
+        <p class="m-auto text-left text-secondary/70 p-4 max-w-3xl">
+            Desarrollé un  sistema de mensaje en tiempo real. <br>
+            Esta aplicacion fue hecha con React.js, TailwindCSS, Zunstand, React-query y MongoDB.
+
+        </p>
+        <figure class="overflow-hidden rounded-lg">
+            <img src={img} alt="" class=" ">
         </figure>
         <div>
-           <h3>{title}</h3>
-           <p>
-            {body}
-           </p>
         </div>
         <div class="flex gap-4 justify-center items-center">
-            <button class=" bg-gradient-to-r from-purple-500 via-blue-600 to-sky-500  border-third py-3 px-7 mt-8 rounded-3xl hover:animate-links">ver página</button>
-            <button class="btn-white border-[1px] border-white py-3 px-7 mt-8 rounded-3xl hover:animate-links">Github</button>
+            <a href={pageUrl} target="_blank" class=" bg-gradient-to-r from-purple-500 via-blue-600 to-sky-500  border-third py-3 px-7 mt-8 rounded-3xl hover:animate-links">ver aplicacion</a>
+            <a href={githubUrl} target="_blank" class="btn-white border-[1px] border-white py-3 px-7 mt-8 rounded-3xl hover:animate-links">Github</a>
         </div>
     </div>
 </div>

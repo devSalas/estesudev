@@ -3,9 +3,10 @@ interface Props{
   name:string;
   image:string;
   width:string;
+  classN:string
 }
 
-const {name,image,width} = Astro.props;
+const {name,image,width, classN} = Astro.props;
 ---
 <div class="box-skill rounded-primary ">
   <div class="skill bg-primary h-full  hover:bg-gray-800   flex sm:items-center  gap-4 p-4 " >
