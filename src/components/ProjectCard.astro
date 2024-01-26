@@ -1,7 +1,7 @@
 ---
 interface Props {
 	title: string;
-	body: string;
+	body: string[];
 	img: string;
     classN:string;
     githubUrl:string;
@@ -13,20 +13,47 @@ const { img, title, body,classN, githubUrl,pageUrl} = Astro.props;
 <div class={`rounded-secondary overflow-hidden m-auto` }>
     <div class="flex flex-col gap-4 p-4  bg-primary ">
         <h3 class="text-2xl text-center mb-4 sm:text-5xl font-light">
-            Chat
+            {title}
         </h3>
-        <p class="m-auto text-left text-secondary/70 p-4 max-w-3xl">
-            Desarrollé un  sistema de mensaje en tiempo real. <br>
-            Esta aplicacion fue hecha con React.js, TailwindCSS, Zunstand, React-query y MongoDB.
-
-        </p>
+        <div>
+          {
+            body.map(el=>(<p class="m-auto text-left text-secondary/70 p-4 max-w-3xl">{el}</p>))
+          }
+        </div>
+        <div class="flex justify-center items-center gap-4 flex-wrap my-4">
+            <div class="flex gap-2 justify-center items-center bg-gradient-to-r from-red-500  to-fuchsia-700 rounded-md p-[1px] max-w-[150px]">
+                <div class="flex justify-center items-center bg-primary w-full h-full rounded-md p-2 gap-2">
+                    <img src="React.png" alt="" width="30">
+                    <span>React.js</span>
+                </div>
+            </div>
+            <div class="flex gap-2 justify-center items-center bg-gradient-to-r from-red-500  to-fuchsia-700 rounded-md p-[1px] max-w-[150px]">
+                <div class="flex justify-center items-center bg-primary w-full h-full rounded-md p-2 gap-2">
+                    <img src="nodejs.png" alt="" width="30">
+                    <span>Node.js</span>
+                </div>
+            </div>
+            <div class="flex gap-2 justify-center items-center bg-gradient-to-r from-red-500  to-fuchsia-700 rounded-md p-[1px] max-w-[150px]">
+                <div class="flex justify-center items-center bg-primary w-full h-full rounded-md p-2 gap-2">
+                    <img src="mongo.png" alt="" width="30">
+                    <span>MongoDB</span>
+                </div>
+            </div>
+            <div class="flex gap-2 justify-center items-center bg-gradient-to-r from-red-500  to-fuchsia-700 rounded-md p-[1px] max-w-[150px]">
+                <div class="flex justify-center items-center bg-primary w-full h-full rounded-md p-2 gap-2">
+                    <img src="tailwind.png" alt="" width="30">
+                    <span>MySQL</span>
+                </div>
+            </div>
+            
+        </div>
         <figure class="overflow-hidden rounded-lg">
             <img src={img} alt="" class=" ">
         </figure>
         <div>
         </div>
         <div class="flex gap-4 justify-center items-center">
-            <a href={pageUrl} target="_blank" class=" bg-gradient-to-r from-purple-500 via-blue-600 to-sky-500  border-third py-3 px-7 mt-8 rounded-3xl hover:animate-links">ver aplicacion</a>
+            <a href={pageUrl} target="_blank" class=" bg-gradient-to-r from-red-500  to-fuchsia-700  border-third py-3 px-7 mt-8 rounded-3xl hover:animate-links">ver aplicacion</a>
             <a href={githubUrl} target="_blank" class="btn-white border-[1px] border-white py-3 px-7 mt-8 rounded-3xl hover:animate-links">Github</a>
         </div>
     </div>
