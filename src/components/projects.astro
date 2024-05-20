@@ -3,14 +3,20 @@ import ProjectCard from "./ProjectCard.astro";
 
 const textCardCompuSalas=["Desarrollamos un sitio web de comercio electrónico dedicado a la venta de equipos de computación.","El proyecto está diseñado para ofrecer a los usuarios una experiencia de compra fluida y segura, integrando funcionalidades clave como un carrito de compras y una pasarela de pago confiable."]
 
+const textCardCaffe=[
+    "Desarrollamos un completo sistema de gestión para una cafetería, proporcionando tanto una interfaz amigable para los clientes como un robusto panel de administración para el personal de la cafetería."
+]
+
 ---
 
 <div id="proyectos" class=" mb-16">
     <h2 class="text-2xl py-8 md:text-3xl lg:text-4xl md:py-16 text-secondary/70">Proyectos</h2>
 
-    <div class="flex flex-col gap-4 sm:grid sm:grid-cols-responsive">
+    <div class="flex flex-col gap-4 sm:grid sm:grid-cols-responsive md:flex md:flex-col">
 
         <ProjectCard img ={"./compusalas.png" } title ={"CompuSalas"} body={textCardCompuSalas}  classN={"m-auto"} githubUrl="https://github.com/devSalas/ecommerce-compuSalas" pageUrl="https://compusalas.netlify.app/"/>
+
+     <!--    <ProjectCard img ={"./project_main.jpg" } title ={"CompuSalas"} body={textCardCaffe}  classN={"m-auto"} githubUrl="https://github.com/devSalas/ecommerce-compuSalas" pageUrl="https://compusalas.netlify.app/"/> -->
 
     </div>
 </div>

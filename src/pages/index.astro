@@ -1,24 +1,27 @@
 ---
-import Footer from '../components/Footer.astro';
-import Loader from '../components/Loader.astro';
-import ProjectLast from '../components/ProjectLast.astro';
-import About from '../components/about.astro';
-import Main from '../components/main.astro';
-import Projects from '../components/projects.astro';
-import Tecnologias from '../components/tecnologias.astro';
-import Layout from '../layouts/Layout.astro';
-
-
-
+import Footer from "../components/Footer.astro";
+import Loader from "../components/Loader.astro";
+import ProjectLast from "../components/ProjectLast.astro";
+import About from "../components/about.astro";
+import Main from "../components/main.astro";
+import Projects from "../components/projects.astro";
+import Carrusel from "../components/react/Carrusel";
+import Tecnologias from "../components/tecnologias.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="estesudev | Frontend, Javascrip, React y mas">
-	<Main/>
-	<ProjectLast/>
-	<Projects/>
-	<Tecnologias/>
-	<!-- <About/> -->
-	<Footer/>
-	<!-- <Loader/> -->
-</Layout>
+	<div class="max-w-5xl m-auto">
+		<Main />
+	</div>
+	<!-- <Carrusel client:only /> -->
 
+	<div class="max-w-5xl m-auto">
+		<ProjectLast />
+		<Projects />
+		<Tecnologias />
+		<Footer />
+	</div>
+	<!-- <About/> -->
+	<Loader />
+</Layout>
