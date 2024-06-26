@@ -7,6 +7,7 @@ import Main from "../components/main.astro";
 import Projects from "../components/projects.astro";
 import Carrusel from "../components/react/Carrusel";
 import Tecnologias from "../components/tecnologias.astro";
+import WorkLast from "../components/workLast.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -17,6 +18,7 @@ import Layout from "../layouts/Layout.astro";
 	<!-- <Carrusel client:only /> -->
 
 	<div class="max-w-5xl m-auto">
+		<WorkLast/>
 		<ProjectLast />
 		<Projects />
 		<Tecnologias />
